@@ -10,7 +10,7 @@ With this document I want to elaborate my chosen test setup.
 In order to make the test suite future proof we have to make the test framework easily maintainable and scalable. I have divided the logic up in several `swift` classes in order to adhere to the DRY principle.
 
 ## BaseClass.swift
-In this file I provided common functionality that our UI tests are using. Such as a `defaultTimeout` and `app` variables. At the moment only the `setup()` and `teardown()` functions are provided. However you could also provide common helper functions that might be useful throughout multiple UI tests since all tests classes should inherit from this `TestBase`.
+In this file I provided common functionality that our UI tests are using. Such as a `defaultTimeout` and `app` variables. At the moment only the `setup()` and `teardown()` functions are provided. However you could also provide common helper functions that might be useful throughout multiple UI tests since all tests classes should inherit from this `BaseClass`.
 
 ## HomePageScreenPO.swift
 All element locators files are placed within the `UiElements` folder. Since this app only has one screen I have created the `HomePageScreePO.swift` file in order to host all elements with respect to this screen. If the application would be bigger I would have created multiple files, each file hosting elements with respect to a particular screen.
